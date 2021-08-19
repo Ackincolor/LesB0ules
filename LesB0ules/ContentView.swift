@@ -34,6 +34,7 @@ struct ContentView: View {
                 }) {
                 Text("Send Message")
                 }
+                PartieList(parties: model.parties)
             }
             
         }

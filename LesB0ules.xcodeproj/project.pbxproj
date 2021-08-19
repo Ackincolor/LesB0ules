@@ -25,6 +25,9 @@
 		364CD40326CD519E00A99138 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364CD40226CD519E00A99138 /* Preview Assets.xcassets */; };
 		364CD40F26CD519E00A99138 /* LesB0ules_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CD40E26CD519E00A99138 /* LesB0ules_WatchKit_AppTests.swift */; };
 		364CD41A26CD519E00A99138 /* LesB0ules_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CD41926CD519E00A99138 /* LesB0ules_WatchKit_AppUITests.swift */; };
+		367266FA26CE8D4100B56805 /* PartieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367266F926CE8D4100B56805 /* PartieRow.swift */; };
+		367266FC26CE91B100B56805 /* PartieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367266FB26CE91B100B56805 /* PartieList.swift */; };
+		367266FE26CE96B300B56805 /* PartieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367266FD26CE96B300B56805 /* PartieDetail.swift */; };
 		36C37F3926CD5772003BFA05 /* ViewModelPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37F3826CD5772003BFA05 /* ViewModelPhone.swift */; };
 		36C37F3B26CD58B0003BFA05 /* ViewModelWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37F3A26CD58B0003BFA05 /* ViewModelWatch.swift */; };
 		36C37F3D26CE5630003BFA05 /* PartieBoules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37F3C26CE5630003BFA05 /* PartieBoules.swift */; };
@@ -133,6 +136,9 @@
 		364CD41526CD519E00A99138 /* LesB0ules WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LesB0ules WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		364CD41926CD519E00A99138 /* LesB0ules_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LesB0ules_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
 		364CD41B26CD519E00A99138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		367266F926CE8D4100B56805 /* PartieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartieRow.swift; sourceTree = "<group>"; };
+		367266FB26CE91B100B56805 /* PartieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartieList.swift; sourceTree = "<group>"; };
+		367266FD26CE96B300B56805 /* PartieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartieDetail.swift; sourceTree = "<group>"; };
 		36C37F3826CD5772003BFA05 /* ViewModelPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPhone.swift; sourceTree = "<group>"; };
 		36C37F3A26CD58B0003BFA05 /* ViewModelWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelWatch.swift; sourceTree = "<group>"; };
 		36C37F3C26CE5630003BFA05 /* PartieBoules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartieBoules.swift; sourceTree = "<group>"; };
@@ -188,6 +194,7 @@
 		364CD3B626CD519400A99138 = {
 			isa = PBXGroup;
 			children = (
+				36C37F3826CD5772003BFA05 /* ViewModelPhone.swift */,
 				364CD3C126CD519500A99138 /* LesB0ules */,
 				364CD3D326CD519900A99138 /* LesB0ulesTests */,
 				364CD3DE26CD519900A99138 /* LesB0ulesUITests */,
@@ -216,7 +223,7 @@
 		364CD3C126CD519500A99138 /* LesB0ules */ = {
 			isa = PBXGroup;
 			children = (
-				36C37F3826CD5772003BFA05 /* ViewModelPhone.swift */,
+				367266F826CE8D2600B56805 /* Views */,
 				364CD3C226CD519500A99138 /* LesB0ulesApp.swift */,
 				364CD3C426CD519500A99138 /* ContentView.swift */,
 				364CD3C626CD519900A99138 /* Assets.xcassets */,
@@ -304,6 +311,16 @@
 				364CD41B26CD519E00A99138 /* Info.plist */,
 			);
 			path = "LesB0ules WatchKit AppUITests";
+			sourceTree = "<group>";
+		};
+		367266F826CE8D2600B56805 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				367266F926CE8D4100B56805 /* PartieRow.swift */,
+				367266FB26CE91B100B56805 /* PartieList.swift */,
+				367266FD26CE96B300B56805 /* PartieDetail.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -561,6 +578,9 @@
 				364CD3C326CD519500A99138 /* LesB0ulesApp.swift in Sources */,
 				36C37F3926CD5772003BFA05 /* ViewModelPhone.swift in Sources */,
 				36C37F3F26CE56AE003BFA05 /* Joueur.swift in Sources */,
+				367266FE26CE96B300B56805 /* PartieDetail.swift in Sources */,
+				367266FA26CE8D4100B56805 /* PartieRow.swift in Sources */,
+				367266FC26CE91B100B56805 /* PartieList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,18 +8,18 @@
 import Foundation
 
 
-struct PartieBoules : Hashable, Codable{
+struct PartieBoules : Hashable, Codable, Identifiable{
+    let id = UUID()
     var nom: String
     var date: Date
     var participants:[Joueur]
     
     //let dateFormatter = DateFormatter()
     
-//    init(){
-//        dateFormatter.dateFormat = "dd/MM/YYYY"
-//        self.date = Date()
-//        self.nom = "Partie du " + dateFormatter.string(from: self.date)
-//        self.participants = []
-//    }
+    init(nom: String){
+        self.date = Date()
+        self.nom = "Partie du " + nom
+        self.participants = []
+    }
     
 }
