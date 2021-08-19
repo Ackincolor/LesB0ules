@@ -1,0 +1,1134 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		364CD3C326CD519500A99138 /* LesB0ulesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CD3C226CD519500A99138 /* LesB0ulesApp.swift */; };
+		364CD3C526CD519500A99138 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CD3C426CD519500A99138 /* ContentView.swift */; };
+		364CD3C726CD519900A99138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364CD3C626CD519900A99138 /* Assets.xcassets */; };
+		364CD3CA26CD519900A99138 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364CD3C926CD519900A99138 /* Preview Assets.xcassets */; };
+		364CD3D526CD519900A99138 /* LesB0ulesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CD3D426CD519900A99138 /* LesB0ulesTests.swift */; };
+		364CD3E026CD519900A99138 /* LesB0ulesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CD3DF26CD519900A99138 /* LesB0ulesUITests.swift */; };
+		364CD3E526CD519900A99138 /* LesB0ules WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 364CD3E426CD519900A99138 /* LesB0ules WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		364CD3EA26CD519B00A99138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364CD3E926CD519B00A99138 /* Assets.xcassets */; };
+		364CD3F126CD519C00A99138 /* LesB0ules WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 364CD3F026CD519C00A99138 /* LesB0ules WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		364CD3F626CD519C00A99138 /* LesB0ulesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CD3F526CD519C00A99138 /* LesB0ulesApp.swift */; };
+		364CD3F826CD519C00A99138 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CD3F726CD519C00A99138 /* ContentView.swift */; };
+		364CD3FA26CD519C00A99138 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CD3F926CD519C00A99138 /* NotificationController.swift */; };
+		364CD3FC26CD519C00A99138 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CD3FB26CD519C00A99138 /* NotificationView.swift */; };
+		364CD3FE26CD519C00A99138 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CD3FD26CD519C00A99138 /* ComplicationController.swift */; };
+		364CD40026CD519E00A99138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364CD3FF26CD519E00A99138 /* Assets.xcassets */; };
+		364CD40326CD519E00A99138 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364CD40226CD519E00A99138 /* Preview Assets.xcassets */; };
+		364CD40F26CD519E00A99138 /* LesB0ules_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CD40E26CD519E00A99138 /* LesB0ules_WatchKit_AppTests.swift */; };
+		364CD41A26CD519E00A99138 /* LesB0ules_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CD41926CD519E00A99138 /* LesB0ules_WatchKit_AppUITests.swift */; };
+		36C37F3926CD5772003BFA05 /* ViewModelPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37F3826CD5772003BFA05 /* ViewModelPhone.swift */; };
+		36C37F3B26CD58B0003BFA05 /* ViewModelWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37F3A26CD58B0003BFA05 /* ViewModelWatch.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		364CD3D126CD519900A99138 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 364CD3B726CD519400A99138 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 364CD3BE26CD519500A99138;
+			remoteInfo = LesB0ules;
+		};
+		364CD3DC26CD519900A99138 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 364CD3B726CD519400A99138 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 364CD3BE26CD519500A99138;
+			remoteInfo = LesB0ules;
+		};
+		364CD3E626CD519900A99138 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 364CD3B726CD519400A99138 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 364CD3E326CD519900A99138;
+			remoteInfo = "LesB0ules WatchKit App";
+		};
+		364CD3F226CD519C00A99138 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 364CD3B726CD519400A99138 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 364CD3EF26CD519C00A99138;
+			remoteInfo = "LesB0ules WatchKit Extension";
+		};
+		364CD40B26CD519E00A99138 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 364CD3B726CD519400A99138 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 364CD3EF26CD519C00A99138;
+			remoteInfo = "LesB0ules WatchKit Extension";
+		};
+		364CD41626CD519E00A99138 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 364CD3B726CD519400A99138 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 364CD3E326CD519900A99138;
+			remoteInfo = "LesB0ules WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		364CD42126CD519E00A99138 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				364CD3F126CD519C00A99138 /* LesB0ules WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD42526CD519E00A99138 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				364CD3E526CD519900A99138 /* LesB0ules WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		364CD3BF26CD519500A99138 /* LesB0ules.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LesB0ules.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		364CD3C226CD519500A99138 /* LesB0ulesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LesB0ulesApp.swift; sourceTree = "<group>"; };
+		364CD3C426CD519500A99138 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		364CD3C626CD519900A99138 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		364CD3C926CD519900A99138 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		364CD3CB26CD519900A99138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		364CD3D026CD519900A99138 /* LesB0ulesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LesB0ulesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		364CD3D426CD519900A99138 /* LesB0ulesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LesB0ulesTests.swift; sourceTree = "<group>"; };
+		364CD3D626CD519900A99138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		364CD3DB26CD519900A99138 /* LesB0ulesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LesB0ulesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		364CD3DF26CD519900A99138 /* LesB0ulesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LesB0ulesUITests.swift; sourceTree = "<group>"; };
+		364CD3E126CD519900A99138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		364CD3E426CD519900A99138 /* LesB0ules WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LesB0ules WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		364CD3E926CD519B00A99138 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		364CD3EB26CD519B00A99138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		364CD3F026CD519C00A99138 /* LesB0ules WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LesB0ules WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		364CD3F526CD519C00A99138 /* LesB0ulesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LesB0ulesApp.swift; sourceTree = "<group>"; };
+		364CD3F726CD519C00A99138 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		364CD3F926CD519C00A99138 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		364CD3FB26CD519C00A99138 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		364CD3FD26CD519C00A99138 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		364CD3FF26CD519E00A99138 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		364CD40226CD519E00A99138 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		364CD40426CD519E00A99138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		364CD40526CD519E00A99138 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		364CD40A26CD519E00A99138 /* LesB0ules WatchKit AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LesB0ules WatchKit AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		364CD40E26CD519E00A99138 /* LesB0ules_WatchKit_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LesB0ules_WatchKit_AppTests.swift; sourceTree = "<group>"; };
+		364CD41026CD519E00A99138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		364CD41526CD519E00A99138 /* LesB0ules WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LesB0ules WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		364CD41926CD519E00A99138 /* LesB0ules_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LesB0ules_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
+		364CD41B26CD519E00A99138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36C37F3826CD5772003BFA05 /* ViewModelPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPhone.swift; sourceTree = "<group>"; };
+		36C37F3A26CD58B0003BFA05 /* ViewModelWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelWatch.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		364CD3BC26CD519500A99138 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD3CD26CD519900A99138 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD3D826CD519900A99138 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD3ED26CD519C00A99138 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD40726CD519E00A99138 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD41226CD519E00A99138 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		364CD3B626CD519400A99138 = {
+			isa = PBXGroup;
+			children = (
+				36C37F3826CD5772003BFA05 /* ViewModelPhone.swift */,
+				364CD3C126CD519500A99138 /* LesB0ules */,
+				364CD3D326CD519900A99138 /* LesB0ulesTests */,
+				364CD3DE26CD519900A99138 /* LesB0ulesUITests */,
+				364CD3E826CD519900A99138 /* LesB0ules WatchKit App */,
+				364CD3F426CD519C00A99138 /* LesB0ules WatchKit Extension */,
+				364CD40D26CD519E00A99138 /* LesB0ules WatchKit AppTests */,
+				364CD41826CD519E00A99138 /* LesB0ules WatchKit AppUITests */,
+				364CD3C026CD519500A99138 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		364CD3C026CD519500A99138 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				364CD3BF26CD519500A99138 /* LesB0ules.app */,
+				364CD3D026CD519900A99138 /* LesB0ulesTests.xctest */,
+				364CD3DB26CD519900A99138 /* LesB0ulesUITests.xctest */,
+				364CD3E426CD519900A99138 /* LesB0ules WatchKit App.app */,
+				364CD3F026CD519C00A99138 /* LesB0ules WatchKit Extension.appex */,
+				364CD40A26CD519E00A99138 /* LesB0ules WatchKit AppTests.xctest */,
+				364CD41526CD519E00A99138 /* LesB0ules WatchKit AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		364CD3C126CD519500A99138 /* LesB0ules */ = {
+			isa = PBXGroup;
+			children = (
+				364CD3C226CD519500A99138 /* LesB0ulesApp.swift */,
+				364CD3C426CD519500A99138 /* ContentView.swift */,
+				364CD3C626CD519900A99138 /* Assets.xcassets */,
+				364CD3CB26CD519900A99138 /* Info.plist */,
+				364CD3C826CD519900A99138 /* Preview Content */,
+			);
+			path = LesB0ules;
+			sourceTree = "<group>";
+		};
+		364CD3C826CD519900A99138 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				364CD3C926CD519900A99138 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		364CD3D326CD519900A99138 /* LesB0ulesTests */ = {
+			isa = PBXGroup;
+			children = (
+				364CD3D426CD519900A99138 /* LesB0ulesTests.swift */,
+				364CD3D626CD519900A99138 /* Info.plist */,
+			);
+			path = LesB0ulesTests;
+			sourceTree = "<group>";
+		};
+		364CD3DE26CD519900A99138 /* LesB0ulesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				364CD3DF26CD519900A99138 /* LesB0ulesUITests.swift */,
+				364CD3E126CD519900A99138 /* Info.plist */,
+			);
+			path = LesB0ulesUITests;
+			sourceTree = "<group>";
+		};
+		364CD3E826CD519900A99138 /* LesB0ules WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				364CD3E926CD519B00A99138 /* Assets.xcassets */,
+				364CD3EB26CD519B00A99138 /* Info.plist */,
+			);
+			path = "LesB0ules WatchKit App";
+			sourceTree = "<group>";
+		};
+		364CD3F426CD519C00A99138 /* LesB0ules WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				364CD3F526CD519C00A99138 /* LesB0ulesApp.swift */,
+				364CD3F726CD519C00A99138 /* ContentView.swift */,
+				364CD3F926CD519C00A99138 /* NotificationController.swift */,
+				364CD3FB26CD519C00A99138 /* NotificationView.swift */,
+				364CD3FD26CD519C00A99138 /* ComplicationController.swift */,
+				364CD3FF26CD519E00A99138 /* Assets.xcassets */,
+				364CD40426CD519E00A99138 /* Info.plist */,
+				364CD40526CD519E00A99138 /* PushNotificationPayload.apns */,
+				364CD40126CD519E00A99138 /* Preview Content */,
+				36C37F3A26CD58B0003BFA05 /* ViewModelWatch.swift */,
+			);
+			path = "LesB0ules WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		364CD40126CD519E00A99138 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				364CD40226CD519E00A99138 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		364CD40D26CD519E00A99138 /* LesB0ules WatchKit AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				364CD40E26CD519E00A99138 /* LesB0ules_WatchKit_AppTests.swift */,
+				364CD41026CD519E00A99138 /* Info.plist */,
+			);
+			path = "LesB0ules WatchKit AppTests";
+			sourceTree = "<group>";
+		};
+		364CD41826CD519E00A99138 /* LesB0ules WatchKit AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				364CD41926CD519E00A99138 /* LesB0ules_WatchKit_AppUITests.swift */,
+				364CD41B26CD519E00A99138 /* Info.plist */,
+			);
+			path = "LesB0ules WatchKit AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		364CD3BE26CD519500A99138 /* LesB0ules */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 364CD42626CD519E00A99138 /* Build configuration list for PBXNativeTarget "LesB0ules" */;
+			buildPhases = (
+				364CD3BB26CD519500A99138 /* Sources */,
+				364CD3BC26CD519500A99138 /* Frameworks */,
+				364CD3BD26CD519500A99138 /* Resources */,
+				364CD42526CD519E00A99138 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				364CD3E726CD519900A99138 /* PBXTargetDependency */,
+			);
+			name = LesB0ules;
+			productName = LesB0ules;
+			productReference = 364CD3BF26CD519500A99138 /* LesB0ules.app */;
+			productType = "com.apple.product-type.application";
+		};
+		364CD3CF26CD519900A99138 /* LesB0ulesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 364CD42926CD519E00A99138 /* Build configuration list for PBXNativeTarget "LesB0ulesTests" */;
+			buildPhases = (
+				364CD3CC26CD519900A99138 /* Sources */,
+				364CD3CD26CD519900A99138 /* Frameworks */,
+				364CD3CE26CD519900A99138 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				364CD3D226CD519900A99138 /* PBXTargetDependency */,
+			);
+			name = LesB0ulesTests;
+			productName = LesB0ulesTests;
+			productReference = 364CD3D026CD519900A99138 /* LesB0ulesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		364CD3DA26CD519900A99138 /* LesB0ulesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 364CD42C26CD519E00A99138 /* Build configuration list for PBXNativeTarget "LesB0ulesUITests" */;
+			buildPhases = (
+				364CD3D726CD519900A99138 /* Sources */,
+				364CD3D826CD519900A99138 /* Frameworks */,
+				364CD3D926CD519900A99138 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				364CD3DD26CD519900A99138 /* PBXTargetDependency */,
+			);
+			name = LesB0ulesUITests;
+			productName = LesB0ulesUITests;
+			productReference = 364CD3DB26CD519900A99138 /* LesB0ulesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		364CD3E326CD519900A99138 /* LesB0ules WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 364CD42226CD519E00A99138 /* Build configuration list for PBXNativeTarget "LesB0ules WatchKit App" */;
+			buildPhases = (
+				364CD3E226CD519900A99138 /* Resources */,
+				364CD42126CD519E00A99138 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				364CD3F326CD519C00A99138 /* PBXTargetDependency */,
+			);
+			name = "LesB0ules WatchKit App";
+			productName = "LesB0ules WatchKit App";
+			productReference = 364CD3E426CD519900A99138 /* LesB0ules WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		364CD3EF26CD519C00A99138 /* LesB0ules WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 364CD41E26CD519E00A99138 /* Build configuration list for PBXNativeTarget "LesB0ules WatchKit Extension" */;
+			buildPhases = (
+				364CD3EC26CD519C00A99138 /* Sources */,
+				364CD3ED26CD519C00A99138 /* Frameworks */,
+				364CD3EE26CD519C00A99138 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LesB0ules WatchKit Extension";
+			productName = "LesB0ules WatchKit Extension";
+			productReference = 364CD3F026CD519C00A99138 /* LesB0ules WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		364CD40926CD519E00A99138 /* LesB0ules WatchKit AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 364CD42F26CD519E00A99138 /* Build configuration list for PBXNativeTarget "LesB0ules WatchKit AppTests" */;
+			buildPhases = (
+				364CD40626CD519E00A99138 /* Sources */,
+				364CD40726CD519E00A99138 /* Frameworks */,
+				364CD40826CD519E00A99138 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				364CD40C26CD519E00A99138 /* PBXTargetDependency */,
+			);
+			name = "LesB0ules WatchKit AppTests";
+			productName = "LesB0ules WatchKit AppTests";
+			productReference = 364CD40A26CD519E00A99138 /* LesB0ules WatchKit AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		364CD41426CD519E00A99138 /* LesB0ules WatchKit AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 364CD43226CD519E00A99138 /* Build configuration list for PBXNativeTarget "LesB0ules WatchKit AppUITests" */;
+			buildPhases = (
+				364CD41126CD519E00A99138 /* Sources */,
+				364CD41226CD519E00A99138 /* Frameworks */,
+				364CD41326CD519E00A99138 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				364CD41726CD519E00A99138 /* PBXTargetDependency */,
+			);
+			name = "LesB0ules WatchKit AppUITests";
+			productName = "LesB0ules WatchKit AppUITests";
+			productReference = 364CD41526CD519E00A99138 /* LesB0ules WatchKit AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		364CD3B726CD519400A99138 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					364CD3BE26CD519500A99138 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					364CD3CF26CD519900A99138 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 364CD3BE26CD519500A99138;
+					};
+					364CD3DA26CD519900A99138 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 364CD3BE26CD519500A99138;
+					};
+					364CD3E326CD519900A99138 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					364CD3EF26CD519C00A99138 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					364CD40926CD519E00A99138 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 364CD3EF26CD519C00A99138;
+					};
+					364CD41426CD519E00A99138 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 364CD3E326CD519900A99138;
+					};
+				};
+			};
+			buildConfigurationList = 364CD3BA26CD519400A99138 /* Build configuration list for PBXProject "LesB0ules" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 364CD3B626CD519400A99138;
+			productRefGroup = 364CD3C026CD519500A99138 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				364CD3BE26CD519500A99138 /* LesB0ules */,
+				364CD3CF26CD519900A99138 /* LesB0ulesTests */,
+				364CD3DA26CD519900A99138 /* LesB0ulesUITests */,
+				364CD3E326CD519900A99138 /* LesB0ules WatchKit App */,
+				364CD3EF26CD519C00A99138 /* LesB0ules WatchKit Extension */,
+				364CD40926CD519E00A99138 /* LesB0ules WatchKit AppTests */,
+				364CD41426CD519E00A99138 /* LesB0ules WatchKit AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		364CD3BD26CD519500A99138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364CD3CA26CD519900A99138 /* Preview Assets.xcassets in Resources */,
+				364CD3C726CD519900A99138 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD3CE26CD519900A99138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD3D926CD519900A99138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD3E226CD519900A99138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364CD3EA26CD519B00A99138 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD3EE26CD519C00A99138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364CD40326CD519E00A99138 /* Preview Assets.xcassets in Resources */,
+				364CD40026CD519E00A99138 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD40826CD519E00A99138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD41326CD519E00A99138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		364CD3BB26CD519500A99138 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364CD3C526CD519500A99138 /* ContentView.swift in Sources */,
+				364CD3C326CD519500A99138 /* LesB0ulesApp.swift in Sources */,
+				36C37F3926CD5772003BFA05 /* ViewModelPhone.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD3CC26CD519900A99138 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364CD3D526CD519900A99138 /* LesB0ulesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD3D726CD519900A99138 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364CD3E026CD519900A99138 /* LesB0ulesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD3EC26CD519C00A99138 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364CD3FA26CD519C00A99138 /* NotificationController.swift in Sources */,
+				364CD3F826CD519C00A99138 /* ContentView.swift in Sources */,
+				364CD3FE26CD519C00A99138 /* ComplicationController.swift in Sources */,
+				364CD3F626CD519C00A99138 /* LesB0ulesApp.swift in Sources */,
+				36C37F3B26CD58B0003BFA05 /* ViewModelWatch.swift in Sources */,
+				364CD3FC26CD519C00A99138 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD40626CD519E00A99138 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364CD40F26CD519E00A99138 /* LesB0ules_WatchKit_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364CD41126CD519E00A99138 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364CD41A26CD519E00A99138 /* LesB0ules_WatchKit_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		364CD3D226CD519900A99138 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 364CD3BE26CD519500A99138 /* LesB0ules */;
+			targetProxy = 364CD3D126CD519900A99138 /* PBXContainerItemProxy */;
+		};
+		364CD3DD26CD519900A99138 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 364CD3BE26CD519500A99138 /* LesB0ules */;
+			targetProxy = 364CD3DC26CD519900A99138 /* PBXContainerItemProxy */;
+		};
+		364CD3E726CD519900A99138 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 364CD3E326CD519900A99138 /* LesB0ules WatchKit App */;
+			targetProxy = 364CD3E626CD519900A99138 /* PBXContainerItemProxy */;
+		};
+		364CD3F326CD519C00A99138 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 364CD3EF26CD519C00A99138 /* LesB0ules WatchKit Extension */;
+			targetProxy = 364CD3F226CD519C00A99138 /* PBXContainerItemProxy */;
+		};
+		364CD40C26CD519E00A99138 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 364CD3EF26CD519C00A99138 /* LesB0ules WatchKit Extension */;
+			targetProxy = 364CD40B26CD519E00A99138 /* PBXContainerItemProxy */;
+		};
+		364CD41726CD519E00A99138 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 364CD3E326CD519900A99138 /* LesB0ules WatchKit App */;
+			targetProxy = 364CD41626CD519E00A99138 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		364CD41C26CD519E00A99138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		364CD41D26CD519E00A99138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		364CD41F26CD519E00A99138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LesB0ules WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "LesB0ules WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ackincolor.LesB0ules.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		364CD42026CD519E00A99138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LesB0ules WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "LesB0ules WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ackincolor.LesB0ules.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		364CD42326CD519E00A99138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = LesB0ules_WatchKit_Extension;
+				INFOPLIST_FILE = "LesB0ules WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ackincolor.LesB0ules.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		364CD42426CD519E00A99138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = LesB0ules_WatchKit_Extension;
+				INFOPLIST_FILE = "LesB0ules WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ackincolor.LesB0ules.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		364CD42726CD519E00A99138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LesB0ules/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = LesB0ules/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ackincolor.LesB0ules;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		364CD42826CD519E00A99138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LesB0ules/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = LesB0ules/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ackincolor.LesB0ules;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		364CD42A26CD519E00A99138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LesB0ulesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ackincolor.LesB0ulesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LesB0ules.app/LesB0ules";
+			};
+			name = Debug;
+		};
+		364CD42B26CD519E00A99138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LesB0ulesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ackincolor.LesB0ulesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LesB0ules.app/LesB0ules";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		364CD42D26CD519E00A99138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LesB0ulesUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ackincolor.LesB0ulesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LesB0ules;
+			};
+			name = Debug;
+		};
+		364CD42E26CD519E00A99138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LesB0ulesUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ackincolor.LesB0ulesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LesB0ules;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		364CD43026CD519E00A99138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "LesB0ules WatchKit AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ackincolor.LesB0ules-WatchKit-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LesB0ules WatchKit Extension.appex/LesB0ules WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		364CD43126CD519E00A99138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "LesB0ules WatchKit AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ackincolor.LesB0ules-WatchKit-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LesB0ules WatchKit Extension.appex/LesB0ules WatchKit Extension";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		364CD43326CD519E00A99138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "LesB0ules WatchKit AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ackincolor.LesB0ules-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "LesB0ules WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		364CD43426CD519E00A99138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "LesB0ules WatchKit AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ackincolor.LesB0ules-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "LesB0ules WatchKit App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		364CD3BA26CD519400A99138 /* Build configuration list for PBXProject "LesB0ules" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				364CD41C26CD519E00A99138 /* Debug */,
+				364CD41D26CD519E00A99138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		364CD41E26CD519E00A99138 /* Build configuration list for PBXNativeTarget "LesB0ules WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				364CD41F26CD519E00A99138 /* Debug */,
+				364CD42026CD519E00A99138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		364CD42226CD519E00A99138 /* Build configuration list for PBXNativeTarget "LesB0ules WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				364CD42326CD519E00A99138 /* Debug */,
+				364CD42426CD519E00A99138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		364CD42626CD519E00A99138 /* Build configuration list for PBXNativeTarget "LesB0ules" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				364CD42726CD519E00A99138 /* Debug */,
+				364CD42826CD519E00A99138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		364CD42926CD519E00A99138 /* Build configuration list for PBXNativeTarget "LesB0ulesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				364CD42A26CD519E00A99138 /* Debug */,
+				364CD42B26CD519E00A99138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		364CD42C26CD519E00A99138 /* Build configuration list for PBXNativeTarget "LesB0ulesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				364CD42D26CD519E00A99138 /* Debug */,
+				364CD42E26CD519E00A99138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		364CD42F26CD519E00A99138 /* Build configuration list for PBXNativeTarget "LesB0ules WatchKit AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				364CD43026CD519E00A99138 /* Debug */,
+				364CD43126CD519E00A99138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		364CD43226CD519E00A99138 /* Build configuration list for PBXNativeTarget "LesB0ules WatchKit AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				364CD43326CD519E00A99138 /* Debug */,
+				364CD43426CD519E00A99138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 364CD3B726CD519400A99138 /* Project object */;
+}
