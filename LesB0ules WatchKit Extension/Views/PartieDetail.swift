@@ -10,9 +10,8 @@ struct PartieDetail: View {
     var partie: PartieBoules
     var body: some View {
         VStack{
-            Text("Partie")
-            Spacer()
-            Text("detail \(partie.nom)")
+            Text("Partie \(partie.nom)")
+            
         }
     }
 }

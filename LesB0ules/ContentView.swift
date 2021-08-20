@@ -36,11 +36,12 @@ struct ContentView: View {
                     var dataString:String
                     do{
                         data = try jsonEncoder.encode(self.model.parties)
-                        dataString = String(data: data, encoding: String.Encoding.utf16) ?? "vide"
+                        dataString = String(data: data, encoding: String.Encoding.utf8) ?? "vide"
                     }catch{
                         dataString = "vide"
                         print("erreur lors de la converision: \(error)")
                     }
+                    print(dataString)
                     self.model.session.sendMessage(["parties" : dataString],  replyHandler: nil) {
                          (error) in
                         print(error.localizedDescription)

@@ -14,7 +14,10 @@ class ViewModelWatch : NSObject,  WCSessionDelegate, ObservableObject{
     @Published var parties: [PartieBoules]
     init(session: WCSession = .default){
         self.session = session
-        self.parties = []
+        self.parties = [
+            PartieBoules(nom: "test1fromwatch"),
+            PartieBoules(nom: "Test2fromwatch")
+        ]
         super.init()
         self.session.delegate = self
         session.activate()
@@ -30,10 +33,12 @@ class ViewModelWatch : NSObject,  WCSessionDelegate, ObservableObject{
                 self.messageText = tempMes ?? ""
             }
             //traitement des données des parties
-            let partiesData = message["parties"] as? Data ?? nil
-            if(partiesData != nil) {
-                self.parties = try! JSONDecoder().decode([PartieBoules].self, from: partiesData ?? Data())
+            let partiesData = message["parties"] as? String ?? ""
+            print (partiesData)
+            if(partiesData != "") {
+                self.parties = try! JSONDecoder().decode([PartieBoules].self, from: partiesData.data(using: .utf8)!)
             }
+            //print(self.parties)
         }
     }
     

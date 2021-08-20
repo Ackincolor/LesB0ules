@@ -36,6 +36,9 @@
 		367A00E526CF9BF600C8E295 /* Joueur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37F3E26CE56AE003BFA05 /* Joueur.swift */; };
 		367A00E726CFA76F00C8E295 /* PartieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A00E626CFA76F00C8E295 /* PartieList.swift */; };
 		367A00EB26CFAEFA00C8E295 /* PartieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A00EA26CFAEFA00C8E295 /* PartieDetail.swift */; };
+		367A00EF26CFD80600C8E295 /* ScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A00EE26CFD80600C8E295 /* ScoreController.swift */; };
+		367A00F226CFDD9300C8E295 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 367A00F026CFDD9300C8E295 /* CoreData.xcdatamodeld */; };
+		367A00F326CFDD9300C8E295 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 367A00F026CFDD9300C8E295 /* CoreData.xcdatamodeld */; };
 		36C37F3926CD5772003BFA05 /* ViewModelPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37F3826CD5772003BFA05 /* ViewModelPhone.swift */; };
 		36C37F3B26CD58B0003BFA05 /* ViewModelWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37F3A26CD58B0003BFA05 /* ViewModelWatch.swift */; };
 		36C37F3D26CE5630003BFA05 /* PartieBoules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C37F3C26CE5630003BFA05 /* PartieBoules.swift */; };
@@ -152,6 +155,8 @@
 		367A00DD26CF96FC00C8E295 /* JoueurDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoueurDetail.swift; sourceTree = "<group>"; };
 		367A00E626CFA76F00C8E295 /* PartieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartieList.swift; sourceTree = "<group>"; };
 		367A00EA26CFAEFA00C8E295 /* PartieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartieDetail.swift; sourceTree = "<group>"; };
+		367A00EE26CFD80600C8E295 /* ScoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreController.swift; sourceTree = "<group>"; };
+		367A00F126CFDD9300C8E295 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		36C37F3826CD5772003BFA05 /* ViewModelPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPhone.swift; sourceTree = "<group>"; };
 		36C37F3A26CD58B0003BFA05 /* ViewModelWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelWatch.swift; sourceTree = "<group>"; };
 		36C37F3C26CE5630003BFA05 /* PartieBoules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartieBoules.swift; sourceTree = "<group>"; };
@@ -236,6 +241,7 @@
 		364CD3C126CD519500A99138 /* LesB0ules */ = {
 			isa = PBXGroup;
 			children = (
+				367A00F026CFDD9300C8E295 /* CoreData.xcdatamodeld */,
 				367266F826CE8D2600B56805 /* Views */,
 				364CD3C226CD519500A99138 /* LesB0ulesApp.swift */,
 				364CD3C426CD519500A99138 /* ContentView.swift */,
@@ -345,6 +351,7 @@
 			children = (
 				367A00E626CFA76F00C8E295 /* PartieList.swift */,
 				367A00EA26CFAEFA00C8E295 /* PartieDetail.swift */,
+				367A00EE26CFD80600C8E295 /* ScoreController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -607,6 +614,7 @@
 				364CD3C326CD519500A99138 /* LesB0ulesApp.swift in Sources */,
 				36C37F3926CD5772003BFA05 /* ViewModelPhone.swift in Sources */,
 				36C37F3F26CE56AE003BFA05 /* Joueur.swift in Sources */,
+				367A00F226CFDD9300C8E295 /* CoreData.xcdatamodeld in Sources */,
 				367266FE26CE96B300B56805 /* PartieDetail.swift in Sources */,
 				367266FA26CE8D4100B56805 /* PartieRow.swift in Sources */,
 				367266FC26CE91B100B56805 /* PartieList.swift in Sources */,
@@ -636,11 +644,13 @@
 				364CD3FA26CD519C00A99138 /* NotificationController.swift in Sources */,
 				364CD3F826CD519C00A99138 /* ContentView.swift in Sources */,
 				364CD3FE26CD519C00A99138 /* ComplicationController.swift in Sources */,
+				367A00F326CFDD9300C8E295 /* CoreData.xcdatamodeld in Sources */,
 				367A00EB26CFAEFA00C8E295 /* PartieDetail.swift in Sources */,
 				367A00E326CF9B8300C8E295 /* PartieRow.swift in Sources */,
 				367A00E426CF9B9B00C8E295 /* PartieBoules.swift in Sources */,
 				364CD3F626CD519C00A99138 /* LesB0ulesApp.swift in Sources */,
 				36C37F3B26CD58B0003BFA05 /* ViewModelWatch.swift in Sources */,
+				367A00EF26CFD80600C8E295 /* ScoreController.swift in Sources */,
 				364CD3FC26CD519C00A99138 /* NotificationView.swift in Sources */,
 				367A00E726CFA76F00C8E295 /* PartieList.swift in Sources */,
 				367A00E526CF9BF600C8E295 /* Joueur.swift in Sources */,
@@ -1191,6 +1201,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		367A00F026CFDD9300C8E295 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				367A00F126CFDD9300C8E295 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 367A00F126CFDD9300C8E295 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 364CD3B726CD519400A99138 /* Project object */;
 }
