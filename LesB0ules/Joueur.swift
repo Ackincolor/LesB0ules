@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct Joueur : Hashable, Codable{
+struct Joueur : Hashable, Codable, Identifiable{
+    var id = UUID()
     var prenom:String
     var boules: Int
-//    init() {
-//        self.prenom = "BoB"
-//        self.boules = 1
-//    }
+    init(prenom: String) {
+        self.prenom = prenom
+        self.boules = 1
+    }
 }

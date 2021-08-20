@@ -9,8 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var model = ViewModelWatch()
+    
     var body: some View {
-        Text(self.model.messageText)
+        VStack{
+            NavigationView{
+                PartieList(parties: self.model.parties)
+            }
+            .navigationTitle("Parties")
+        }
     }
 }
 

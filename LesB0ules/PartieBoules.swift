@@ -9,7 +9,7 @@ import Foundation
 
 
 struct PartieBoules : Hashable, Codable, Identifiable{
-    let id = UUID()
+    var id = UUID()
     var nom: String
     var date: Date
     var participants:[Joueur]
@@ -19,7 +19,10 @@ struct PartieBoules : Hashable, Codable, Identifiable{
     init(nom: String){
         self.date = Date()
         self.nom = "Partie du " + nom
-        self.participants = []
+        self.participants = [
+            Joueur(prenom: "testDetail1"),
+            Joueur(prenom: "testDetail2")
+        ]
     }
     
 }

@@ -31,6 +31,20 @@ struct ContentView: View {
                     self.model.session.sendMessage(["message" : self.messageText], replyHandler: nil) { (error) in
                         print(error.localizedDescription)
                     }
+                    let jsonEncoder = JSONEncoder()
+                    var data:Data
+                    var dataString:String
+                    do{
+                        data = try jsonEncoder.encode(self.model.parties)
+                        dataString = String(data: data, encoding: String.Encoding.utf16) ?? "vide"
+                    }catch{
+                        dataString = "vide"
+                        print("erreur lors de la converision: \(error)")
+                    }
+                    self.model.session.sendMessage(["parties" : dataString],  replyHandler: nil) {
+                         (error) in
+                        print(error.localizedDescription)
+                    }
                 }) {
                 Text("Send Message")
                 }

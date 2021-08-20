@@ -1,10 +1,9 @@
 //
 //  PartieDetail.swift
-//  LesB0ules
+//  LesB0ules WatchKit Extension
 //
-//  Created by lois guillet on 19/08/2021.
+//  Created by lois guillet on 20/08/2021.
 //
-
 import SwiftUI
 
 struct PartieDetail: View {
@@ -14,8 +13,6 @@ struct PartieDetail: View {
             Text("Partie")
             Spacer()
             Text("detail \(partie.nom)")
-            JoueursList(joueurs: partie.participants)
-            
         }
     }
 }
