@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ScoreController: View {
-    @State var partie: PartieBoules
+    @StateObject var partie: Game
     var body: some View {
         HStack{
             VStack{
@@ -16,7 +16,12 @@ struct ScoreController: View {
                 //btn
                 Button(action:{
                     //ajout a l'equipe 1
-                    self.partie.scoreE1 += 1
+                    self.partie.setValue((self.partie.scoreE1+1) , forKey: "scoreE1")
+                    if(self.partie.scoreE1 >= 13)
+                    {
+                        //gagné
+                    }
+                    PersistenceController.shared.save()
                 }){
                     Image(systemName: "plus.circle")
                 }
@@ -27,6 +32,7 @@ struct ScoreController: View {
                 Button(action:{
                     //retrait a l'equipe 1
                     self.partie.scoreE1 -= 1
+                    PersistenceController.shared.save()
                 }){
                     Image(systemName: "minus.circle")
                 }
@@ -36,6 +42,7 @@ struct ScoreController: View {
                 //btn
                 Button(action:{
                     self.partie.scoreE2 += 1
+                    PersistenceController.shared.save()
                 }){
                     Image(systemName: "plus.circle")
                 }
@@ -45,6 +52,7 @@ struct ScoreController: View {
                 //btn
                 Button(action:{
                     self.partie.scoreE2 -= 1
+                    PersistenceController.shared.save()
                 }){
                     Image(systemName: "minus.circle")
                 }
@@ -53,8 +61,8 @@ struct ScoreController: View {
     }
 }
 
-struct ScoreController_Previews: PreviewProvider {
-    static var previews: some View {
-        ScoreController(partie: PartieBoules(nom: "testDetail"))
-    }
-}
+//struct ScoreController_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ScoreController(partie: PartieBoules(nom: "testDetail"))
+//    }
+//}

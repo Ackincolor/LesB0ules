@@ -6,8 +6,30 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
+    @FetchRequest(
+            entity: Game.entity(),
+            sortDescriptors: [NSSortDescriptor(keyPath: \Game.nom, ascending: true)]
+        ) var games: FetchedResults<Game>
+    
+    func deleteAllData(_ entity:String) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+        fetchRequest.returnsObjectsAsFaults = false
+        do {
+            let results = try managedObjectContext.fetch(fetchRequest)
+            for object in results {
+                guard let objectData = object as? NSManagedObject else {continue}
+                managedObjectContext.delete(objectData)
+                PersistenceController.shared.save()
+            }
+        } catch let error {
+            print("Detele all data in \(entity) error :", error)
+        }
+    }
     var model = ViewModelPhone()
         @State var reachable = "No"
         @State var messageText = ""
@@ -35,7 +57,11 @@ struct ContentView: View {
                     var data:Data
                     var dataString:String
                     do{
-                        data = try jsonEncoder.encode(self.model.parties)
+                        var tmp:[PartieBoules] = []
+                        for game in self.games {
+                            tmp.append(PartieBoules.init(from: game))
+                        }
+                        data = try jsonEncoder.encode(tmp)
                         dataString = String(data: data, encoding: String.Encoding.utf8) ?? "vide"
                     }catch{
                         dataString = "vide"
@@ -49,7 +75,22 @@ struct ContentView: View {
                 }) {
                 Text("Send Message")
                 }
-                PartieList(parties: model.parties)
+                Button(action: {
+                    var tmp = PartieBoules(nom: "test Insert for watch")
+                    tmp.id = UUID()
+                    tmp.scoreE1 = 13
+                    tmp.toGame(managedObjectContext: managedObjectContext)
+                    PersistenceController.shared.save()
+                }){
+                    Text("AddGame")
+                }
+                Button(action: {
+                    deleteAllData("Game")
+                    deleteAllData("Person")
+                }){
+                    Text("deleteAll")
+                }
+                PartieList(parties: self.games)
             }
             
         }
@@ -60,3 +101,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

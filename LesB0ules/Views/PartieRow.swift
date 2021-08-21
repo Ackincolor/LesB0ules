@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct PartieRow: View {
-    var partie: PartieBoules
+    var partie: Game
     var body: some View {
-        HStack{
-            Text(partie.nom)
+        VStack{
+            Text(partie.nom!)
+            Text(partie.id!.uuidString).font(.system(size: 7))
         }
     }
 }
-
-struct PartieRow_Previews: PreviewProvider {
-    static var previews: some View {
-        PartieRow(partie: PartieBoules(nom: "Test"))
-    }
-}
+//
+//struct PartieRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PartieRow(partie: PartieBoules(nom: "Test"))
+//    }
+//}

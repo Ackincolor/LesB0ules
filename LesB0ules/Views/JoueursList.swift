@@ -8,24 +8,24 @@
 import SwiftUI
 
 struct JoueursList: View {
-    let joueurs: [Joueur]
+    let joueurs: [Person]
     
     var body: some View {
-        NavigationView{
+        
             List(joueurs){ _joueur in
                 NavigationLink(destination: JoueurDetail(joueur: _joueur)){
                     JoueurRow(joueur: _joueur)
                 }
             }
-        }
+        
     }
 }
 
-struct JoueursList_Previews: PreviewProvider {
-    static var previews: some View {
-        JoueursList(joueurs: [
-            Joueur(prenom: "bob3"),
-            Joueur(prenom: "bob4")
-        ])
-    }
-}
+//struct JoueursList_Previews: PreviewProvider {
+//    static var previews: some View {
+//        JoueursList(joueurs: [
+//            Joueur(prenom: "bob3"),
+//            Joueur(prenom: "bob4")
+//        ])
+//    }
+//}

@@ -6,17 +6,29 @@
         <attribute name="nom" optional="YES" attributeType="String"/>
         <attribute name="scoreE1" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="scoreE2" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="equipe1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person"/>
-        <relationship name="equipe2" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person"/>
-        <relationship name="participants" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person"/>
+        <attribute name="updatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="equipe1" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Person"/>
+        <relationship name="equipe2" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Person"/>
+        <relationship name="participants" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Person"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="class">
         <attribute name="boules" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="prenom" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+                <constraint value="prenom"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Person" positionX="-36" positionY="9" width="128" height="14"/>
-        <element name="Game" positionX="0" positionY="45" width="128" height="149"/>
+        <element name="Game" positionX="14.95703125" positionY="-446.966552734375" width="128" height="164"/>
+        <element name="Person" positionX="-240.87890625" positionY="-405.974365234375" width="128" height="74"/>
     </elements>
 </model>

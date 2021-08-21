@@ -7,17 +7,17 @@
 import SwiftUI
 
 struct PartieDetail: View {
-    var partie: PartieBoules
+    var partie: Game
     var body: some View {
         VStack{
-            Text("Partie \(partie.nom)")
-            
+            Text("Partie ")
+            ScoreController(partie: self.partie)
         }
     }
 }
 
-struct PartieDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        PartieDetail(partie: PartieBoules(nom: "testDetail"))
-    }
-}
+//struct PartieDetail_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PartieDetail(partie: PartieBoules(nom: "testDetail"))
+//    }
+//}

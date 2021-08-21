@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PartieList: View {
-    let parties: [PartieBoules]
+    let parties: FetchedResults<Game>
     
     var body: some View {
         NavigationView{
@@ -22,11 +22,11 @@ struct PartieList: View {
     }
 }
 
-struct PartieList_Previews: PreviewProvider {
-    static var previews: some View {
-        PartieList(parties: [
-            PartieBoules(nom: "test1"),
-            PartieBoules(nom: "Test2")
-        ])
-    }
-}
+//struct PartieList_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PartieList(parties: [
+//            PartieBoules(nom: "test1"),
+//            PartieBoules(nom: "Test2")
+//        ])
+//    }
+//}

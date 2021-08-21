@@ -11,59 +11,28 @@ import CoreData
 @main
 struct LesB0ulesApp: App {
     
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
-    static var persistentContainer: NSPersistentContainer {
-        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer
-    }
-    
-    static var viewContext: NSManagedObjectContext {
-        return persistentContainer.viewContext
-    }
+    let persistenceController = PersistenceController.shared
+        
+    @Environment(\.scenePhase) var scenePhase
     
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
-    }
-}
-
-class AppDelegate: NSObject, UIApplicationDelegate {
-    lazy var persistentContainer: NSPersistentContainer = {
-           let container = NSPersistentContainer(name: "leboules")
-           container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-               if let error = error as NSError? {
-                   fatalError("Unresolved error \(error), \(error.userInfo)")
-               }
-           })
-           return container
-       }()
-    
-    var viewContext: NSManagedObjectContext {
-        return persistentContainer.viewContext
-    }
-    
-    func saveContext() {
-      // 1
-      let context = persistentContainer.viewContext
-      // 2
-      if context.hasChanges {
-        do {
-          // 3
-          try context.save()
-        } catch {
-          // 4
-          // The context couldn't be saved.
-          // You should add your own error handling here.
-          let nserror = error as NSError
-          fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        .onChange(of: scenePhase) { (newScenePhase) in
+            switch newScenePhase {
+            case .background:
+                print("Scene is in background")
+                persistenceController.save()
+            case .inactive:
+                print("Scene is inactive")
+            case .active:
+                ViewModelPhone().sync()
+                print("Scene is active")
+            @unknown default:
+                print("Apple must have changed something")
+            }
         }
-      }
-    }
-
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        
-        return true
     }
 }

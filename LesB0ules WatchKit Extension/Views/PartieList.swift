@@ -8,9 +8,20 @@
 import SwiftUI
 
 struct PartieList: View {
-    let parties: [PartieBoules]
+    @Environment(\.managedObjectContext) var managedObjectContext
+    let parties: FetchedResults<Game>
     
     var body: some View {
+//        Button(action: {
+//            var tmp = PartieBoules(nom: "test Insert")
+//            tmp.id = UUID()
+//            tmp.scoreE1 = 13
+//            tmp.toGame(managedObjectContext: managedObjectContext)
+//            PersistenceController.shared.save()
+//            print("Insert Game into Watch")
+//        }){
+//            Text("AddGame")
+//        }
             List(parties){ _partie in
                 NavigationLink(destination: PartieDetail(partie: _partie)) {
                     PartieRow(partie: _partie)
@@ -19,11 +30,11 @@ struct PartieList: View {
     }
 }
 
-struct PartieList_Previews: PreviewProvider {
-    static var previews: some View {
-        PartieList(parties: [
-            PartieBoules(nom: "test1"),
-            PartieBoules(nom: "Test2")
-        ])
-    }
-}
+//struct PartieList_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PartieList(parties: [
+//            PartieBoules(nom: "test1"),
+//            PartieBoules(nom: "Test2")
+//        ])
+//    }
+//}

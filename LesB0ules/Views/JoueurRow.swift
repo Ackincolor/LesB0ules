@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct JoueurRow: View {
-    var joueur: Joueur
+    var joueur: Person
     var body: some View {
         HStack{
-            Text(joueur.prenom)
+            Text(joueur.prenom!)
         }
     }
 }
 
-struct JoueurRow_Previews: PreviewProvider {
-    static var previews: some View {
-        JoueurRow(joueur: Joueur(prenom: "BobTest"))
-    }
-}
+//struct JoueurRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        JoueurRow(joueur: Person())
+//    }
+//}

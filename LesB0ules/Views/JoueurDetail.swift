@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct JoueurDetail: View {
-    var joueur: Joueur
+    var joueur: Person
     var body: some View {
         VStack{
             Text("Joueur")
             Spacer()
-            Text("detail \(joueur.prenom)")
+            Text("detail" + joueur.prenom!)
             
         }
     }
 }
 
-struct JoueurDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        JoueurDetail(joueur: Joueur(prenom: "JoueurDetail"))
-    }
-}
+//struct JoueurDetail_Previews: PreviewProvider {
+//    static var previews: some View {
+//        JoueurDetail(joueur: Joueur(prenom: "JoueurDetail"))
+//    }
+//}
