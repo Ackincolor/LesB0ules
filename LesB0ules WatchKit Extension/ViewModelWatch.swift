@@ -37,6 +37,18 @@ class ViewModelWatch : NSObject,  WCSessionDelegate, ObservableObject{
             if(tempMes != nil) {
                 if(tempMes=="sync"){
                     //sync to Iphone
+                    //fetchData
+                    do{
+                        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Game")
+                        var fetchedData = try self.managedObjectContext.fetch(fetchRequest) as! [Game]
+                        var toSend:[PartieBoules] = []
+                        for game in fetchedData {
+                            toSend.append(PartieBoules.init(from: game))
+                        }
+                        
+                    }catch{
+                        print("erreur lors du fetch : \(error.localizedDescription)")
+                    }
                 }else{
                     self.messageText = tempMes ?? ""
                 }

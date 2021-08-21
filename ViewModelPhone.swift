@@ -42,6 +42,11 @@ class ViewModelPhone : NSObject,  WCSessionDelegate, ObservableObject{
     }
     func sync() {
         //try to sync with watch
+        if(session.isReachable){
+            self.session.sendMessage(["sync" : "true"], replyHandler: nil) { (error) in
+                print(error.localizedDescription)
+            }
+        }
     }
     
     
