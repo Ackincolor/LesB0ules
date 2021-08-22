@@ -30,6 +30,14 @@ struct ContentView: View {
             print("Detele all data in \(entity) error :", error)
         }
     }
+    func sync() {
+        //try to sync with watch
+        if(self.model.session.isReachable){
+            self.model.session.sendMessage(["sync" : "true"], replyHandler: nil) { (error) in
+                print(error.localizedDescription)
+            }
+        }
+    }
     var model = ViewModelPhone()
         @State var reachable = "No"
         @State var messageText = ""
@@ -89,6 +97,11 @@ struct ContentView: View {
                     deleteAllData("Person")
                 }){
                     Text("deleteAll")
+                }
+                Button(action: {
+                    self.sync()
+                }){
+                    Text("sync")
                 }
                 PartieList(parties: self.games)
             }

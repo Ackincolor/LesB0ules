@@ -14,6 +14,7 @@ class ViewModelWatch : NSObject,  WCSessionDelegate, ObservableObject{
     @Published var messageText = "test"
     @Published var parties: [Game]
     var managedObjectContext = PersistenceController.shared.container.viewContext
+    let jsonEncoder = JSONEncoder()
     init(session: WCSession = .default){
         
         self.session = session
@@ -24,40 +25,45 @@ class ViewModelWatch : NSObject,  WCSessionDelegate, ObservableObject{
         self.parties = []
         super.init()
         self.session.delegate = self
-        session.activate()
+        self.session.activate()
     }
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
     }
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        print("message recu")
         DispatchQueue.main.async {
             
             let tempMes = message["message"] as? String ?? nil
+            let sync = message["sync"] as? String ?? nil
             if(tempMes != nil) {
-                if(tempMes=="sync"){
-                    //sync to Iphone
-                    //fetchData
-                    do{
-                        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Game")
-                        var fetchedData = try self.managedObjectContext.fetch(fetchRequest) as! [Game]
-                        var toSend:[PartieBoules] = []
-                        for game in fetchedData {
-                            toSend.append(PartieBoules.init(from: game))
-                        }
-                        
-                    }catch{
-                        print("erreur lors du fetch : \(error.localizedDescription)")
-                    }
-                }else{
                     self.messageText = tempMes ?? ""
+            }
+            print("message recu : \(sync)")
+            if(sync != nil){
+                //sync to Iphone
+                //fetchData
+                do{
+                    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Game")
+                    let fetchedData = try self.managedObjectContext.fetch(fetchRequest) as! [Game]
+                    var toSend:[PartieBoules] = []
+                    for game in fetchedData {
+                        toSend.append(PartieBoules.init(from: game))
+                    }
+                    let data = try self.jsonEncoder.encode(toSend)
+                    let dataString = String(data: data, encoding: String.Encoding.utf8) ?? "vide"
+                    self.session.sendMessage(["partiessyncw" : dataString],  replyHandler: nil) {
+                         (error) in
+                        print(error.localizedDescription)
+                    }
+                }catch{
+                    print("erreur lors du fetch : \(error.localizedDescription)")
                 }
             }
             //traitement des données des parties
             let partiesData = message["parties"] as? String ?? ""
             //print (partiesData)
             if(partiesData != "") {
-                var tmp_parties = try! JSONDecoder().decode([PartieBoules].self, from: partiesData.data(using: .utf8)!)
+                let tmp_parties = try! JSONDecoder().decode([PartieBoules].self, from: partiesData.data(using: .utf8)!)
                 //utilisation d'une class tempon
                 for game in tmp_parties {
                     do{

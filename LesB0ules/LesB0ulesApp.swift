@@ -28,7 +28,7 @@ struct LesB0ulesApp: App {
             case .inactive:
                 print("Scene is inactive")
             case .active:
-                ViewModelPhone().sync()
+                //ViewModelPhone().sync()
                 print("Scene is active")
             @unknown default:
                 print("Apple must have changed something")

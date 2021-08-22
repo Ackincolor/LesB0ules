@@ -17,6 +17,7 @@ struct ScoreController: View {
                 Button(action:{
                     //ajout a l'equipe 1
                     self.partie.setValue((self.partie.scoreE1+1) , forKey: "scoreE1")
+                    self.partie.updatedDate = Date()
                     if(self.partie.scoreE1 >= 13)
                     {
                         //gagné
@@ -32,6 +33,7 @@ struct ScoreController: View {
                 Button(action:{
                     //retrait a l'equipe 1
                     self.partie.scoreE1 -= 1
+                    self.partie.updatedDate = Date()
                     PersistenceController.shared.save()
                 }){
                     Image(systemName: "minus.circle")
@@ -42,6 +44,7 @@ struct ScoreController: View {
                 //btn
                 Button(action:{
                     self.partie.scoreE2 += 1
+                    self.partie.updatedDate = Date()
                     PersistenceController.shared.save()
                 }){
                     Image(systemName: "plus.circle")
@@ -52,6 +55,7 @@ struct ScoreController: View {
                 //btn
                 Button(action:{
                     self.partie.scoreE2 -= 1
+                    self.partie.updatedDate = Date()
                     PersistenceController.shared.save()
                 }){
                     Image(systemName: "minus.circle")
