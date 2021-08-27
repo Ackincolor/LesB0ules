@@ -41,77 +41,121 @@ struct ContentView: View {
     var model = ViewModelPhone()
         @State var reachable = "No"
         @State var messageText = ""
+        @State var showModal = false
         var body: some View {
-            VStack{
-                Text("Reachable \(reachable)")
-                
-                Button(action: {
-                    if self.model.session.isReachable{
-                        self.reachable = "Yes"
+            ZStack{
+                VStack{
+                    PartieList(parties: self.games, showModal: self.$showModal)
+                        
+                    Text("Reachable \(reachable)")
+                    
+                    Button(action: {
+                        if self.model.session.isReachable{
+                            self.reachable = "Yes"
+                        }
+                        else{
+                            self.reachable = "No"
+                        }
+                        
+                    }) {
+                        Text("Update")
                     }
-                    else{
-                        self.reachable = "No"
+                    TextField("Input your message", text: $messageText)
+                    Button(action: {
+                        self.model.session.sendMessage(["message" : self.messageText], replyHandler: nil) { (error) in
+                            print(error.localizedDescription)
+                        }
+                        let jsonEncoder = JSONEncoder()
+                        var data:Data
+                        var dataString:String
+                        do{
+                            var tmp:[PartieBoules] = []
+                            for game in self.games {
+                                tmp.append(PartieBoules.init(from: game))
+                            }
+                            data = try jsonEncoder.encode(tmp)
+                            dataString = String(data: data, encoding: String.Encoding.utf8) ?? "vide"
+                        }catch{
+                            dataString = "vide"
+                            print("erreur lors de la converision: \(error)")
+                        }
+                        print(dataString)
+                        self.model.session.sendMessage(["parties" : dataString],  replyHandler: nil) {
+                             (error) in
+                            print(error.localizedDescription)
+                        }
+                    }) {
+                    Text("Send Message")
+                    }
+                    Button(action: {
+                        var tmp = PartieBoules(nom: "test Insert for watch")
+                        tmp.id = UUID()
+                        tmp.scoreE1 = 13
+                        tmp.toGame(managedObjectContext: managedObjectContext)
+                        PersistenceController.shared.save()
+                    }){
+                        Text("AddGame")
+                    }
+                    Button(action: {
+                        deleteAllData("Game")
+                        deleteAllData("Person")
+                    }){
+                        Text("deleteAll")
+                    }
+                    Button(action: {
+                        self.sync()
+                    }){
+                        Text("sync")
                     }
                     
-                }) {
-                    Text("Update")
+                    
+                    
                 }
-                TextField("Input your message", text: $messageText)
-                Button(action: {
-                    self.model.session.sendMessage(["message" : self.messageText], replyHandler: nil) { (error) in
-                        print(error.localizedDescription)
+                if showModal {
+                    Rectangle() // the semi-transparent overlay
+                        .foregroundColor(Color.black.opacity(0.5))
+                        .edgesIgnoringSafeArea(.all)
+
+                    GeometryReader { geometry in // the modal container
+                        RoundedRectangle(cornerRadius: 16)
+                            .foregroundColor(.white)
+                            .frame(width: min(geometry.size.width - 100, 300), height: min(geometry.size.height - 100, 200))
+                            .overlay(ModalContentView(showModal: self.$showModal))
                     }
-                    let jsonEncoder = JSONEncoder()
-                    var data:Data
-                    var dataString:String
-                    do{
-                        var tmp:[PartieBoules] = []
-                        for game in self.games {
-                            tmp.append(PartieBoules.init(from: game))
-                        }
-                        data = try jsonEncoder.encode(tmp)
-                        dataString = String(data: data, encoding: String.Encoding.utf8) ?? "vide"
-                    }catch{
-                        dataString = "vide"
-                        print("erreur lors de la converision: \(error)")
-                    }
-                    print(dataString)
-                    self.model.session.sendMessage(["parties" : dataString],  replyHandler: nil) {
-                         (error) in
-                        print(error.localizedDescription)
-                    }
-                }) {
-                Text("Send Message")
+                    .transition(.move(edge: .bottom))
+
                 }
-                Button(action: {
-                    var tmp = PartieBoules(nom: "test Insert for watch")
-                    tmp.id = UUID()
-                    tmp.scoreE1 = 13
-                    tmp.toGame(managedObjectContext: managedObjectContext)
-                    PersistenceController.shared.save()
-                }){
-                    Text("AddGame")
-                }
-                Button(action: {
-                    deleteAllData("Game")
-                    deleteAllData("Person")
-                }){
-                    Text("deleteAll")
-                }
-                Button(action: {
-                    self.sync()
-                }){
-                    Text("sync")
-                }
-                PartieList(parties: self.games)
             }
-            
         }
     }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+struct ModalContentView: View {
+    @Binding var showModal: Bool
+    @Binding var nom:String
+
+    var body: some View {
+        VStack {
+            Text("Ajouter une partie")
+            Form {
+                           TextField("Username", text: $nom)
+            }
+            Button(action: {
+                withAnimation {
+                    self.showModal.toggle()
+                }
+            }) {
+                HStack {
+                    Image(systemName: "xmark.circle.fill")
+                        .imageScale(.large)
+                    Text("Close Modal")
+                }
+            }
+        }
     }
 }
 

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PartieList: View {
     let parties: FetchedResults<Game>
+    @Binding var showModal: Bool
     
     var body: some View {
         NavigationView{
@@ -18,6 +19,14 @@ struct PartieList: View {
                 }
             }
             .navigationTitle("Parties")
+            .navigationBarHidden(false)
+            .navigationBarItems(trailing: Button(action: {
+                withAnimation {
+                    self.showModal.toggle()
+                }
+                }) {
+                    Image(systemName: "plus")
+            })
         }
     }
 }
