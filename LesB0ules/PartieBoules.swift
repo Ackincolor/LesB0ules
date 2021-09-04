@@ -26,8 +26,8 @@ struct PartieBoules : Hashable, Codable, Identifiable{
         self.updatedDate = Date()
         self.nom = "Partie " + nom
         self.participants = [
-            Joueur(prenom: "testDetail1", id: UUID(uuidString: "E621E1F8-C36C-495A-93FC-0C247A3E6E5F")!),
-            Joueur(prenom: "testDetail2", id: UUID(uuidString: "E621E1F8-C36C-495A-93FC-0C247A3E6EFF")!)
+            Joueur(prenom: "testDetail1", id: UUID()),
+            Joueur(prenom: "testDetail2", id: UUID())
         ]
         equipe1 = [self.participants[0]]
         equipe2 = [self.participants[1]]

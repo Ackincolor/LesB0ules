@@ -27,8 +27,13 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
+    <entity name="Queue" representedClassName="Queue" syncable="YES" codeGenerationType="class">
+        <attribute name="ack" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="msg" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="Game" positionX="14.95703125" positionY="-446.966552734375" width="128" height="164"/>
         <element name="Person" positionX="-240.87890625" positionY="-405.974365234375" width="128" height="74"/>
+        <element name="Queue" positionX="-117" positionY="-369" width="128" height="59"/>
     </elements>
 </model>

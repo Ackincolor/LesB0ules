@@ -28,6 +28,7 @@
 		367266FA26CE8D4100B56805 /* PartieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367266F926CE8D4100B56805 /* PartieRow.swift */; };
 		367266FC26CE91B100B56805 /* PartieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367266FB26CE91B100B56805 /* PartieList.swift */; };
 		367266FE26CE96B300B56805 /* PartieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367266FD26CE96B300B56805 /* PartieDetail.swift */; };
+		367459CB26E3C6BB00CE81D5 /* ScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A00EE26CFD80600C8E295 /* ScoreController.swift */; };
 		367A00DA26CECC0E00C8E295 /* JoueurRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A00D926CECC0E00C8E295 /* JoueurRow.swift */; };
 		367A00DC26CECCF000C8E295 /* JoueursList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A00DB26CECCF000C8E295 /* JoueursList.swift */; };
 		367A00DE26CF96FC00C8E295 /* JoueurDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A00DD26CF96FC00C8E295 /* JoueurDetail.swift */; };
@@ -620,6 +621,7 @@
 				36C37F3926CD5772003BFA05 /* ViewModelPhone.swift in Sources */,
 				36C37F3F26CE56AE003BFA05 /* Joueur.swift in Sources */,
 				367266FE26CE96B300B56805 /* PartieDetail.swift in Sources */,
+				367459CB26E3C6BB00CE81D5 /* ScoreController.swift in Sources */,
 				367A00F926D0168600C8E295 /* PersistenceController.swift in Sources */,
 				367266FA26CE8D4100B56805 /* PartieRow.swift in Sources */,
 				367266FC26CE91B100B56805 /* PartieList.swift in Sources */,

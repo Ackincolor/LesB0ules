@@ -12,7 +12,11 @@ struct PartieRow: View {
     var body: some View {
         VStack{
             Text(partie.nom!)
-            Text(partie.id!.uuidString).font(.system(size: 7))
+            if(partie.id != nil){
+                Text(partie.id!.uuidString).font(.system(size: 7))
+            }else{
+                Text("nil").font(.system(size: 7))
+            }
         }
     }
 }

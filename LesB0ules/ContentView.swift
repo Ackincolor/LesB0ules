@@ -136,23 +136,55 @@ struct ContentView_Previews: PreviewProvider {
 }
 struct ModalContentView: View {
     @Binding var showModal: Bool
-    @Binding var nom:String
+    @State var nom = ""
+    
+    @Environment(\.managedObjectContext) var managedObjectContext
 
     var body: some View {
         VStack {
             Text("Ajouter une partie")
             Form {
-                           TextField("Username", text: $nom)
+                TextField("Username", text: self.$nom)
             }
-            Button(action: {
-                withAnimation {
-                    self.showModal.toggle()
+            HStack{
+                Button(action: {
+                    withAnimation {
+                        self.showModal.toggle()
+                    }
+                }) {
+                    HStack {
+                        Image(systemName: "xmark.circle.fill")
+                            .imageScale(.large)
+                        Text("Annuler")
+                    }
                 }
-            }) {
-                HStack {
-                    Image(systemName: "xmark.circle.fill")
-                        .imageScale(.large)
-                    Text("Close Modal")
+                Button(action: {
+                    withAnimation {
+                        //save into storage
+                        do{
+                            let game = Game(context: managedObjectContext)
+                            game.date = Date()
+                            game.nom = self.nom
+                            game.scoreE1 = 0
+                            game.scoreE2 = 0
+                            game.participants = NSOrderedSet(array: [])
+                    //        game.equipe1 = NSOrderedSet(array: self.equipe1)
+                    //        game.equipe2 = NSOrderedSet(array: self.equipe2)
+                            game.id = UUID()
+                            game.updatedDate = Date()
+                            try managedObjectContext.save()
+                            //close modal
+                            self.showModal.toggle()
+                        }catch{
+                            print(error.localizedDescription)
+                        }
+                    }
+                }) {
+                    HStack {
+                        Image(systemName: "checkmark.circle.fill")
+                            .imageScale(.large)
+                        Text("Ajouter")
+                    }
                 }
             }
         }

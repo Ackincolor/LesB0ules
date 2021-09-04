@@ -75,6 +75,47 @@ class ViewModelWatch : NSObject,  WCSessionDelegate, ObservableObject{
                     }
                 }
             }
+            
+            
+            //sync from iphone
+            let dataFromI = message["partiessynci"] as? String ?? nil
+            if(dataFromI != nil) {
+                let tmp_parties = try! JSONDecoder().decode([PartieBoules].self, from: dataFromI!.data(using: .utf8)!)
+                print(tmp_parties)
+                for game in tmp_parties {
+                    do{
+                        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Game")
+                        fetchRequest.predicate = NSPredicate(format:"id == %@",game.id.uuidString)
+                        let fetchedData = try self.managedObjectContext.fetch(fetchRequest) as! [Game]
+                        var toCompare:[Game] = []
+                        for game in fetchedData {
+                            toCompare.append(game)
+                        }
+                        if(!toCompare.isEmpty){
+                            let more_recent = game.updatedDate > (toCompare[0].updatedDate)! ? true : false
+                            if(more_recent)
+                            {
+                                print("Updating : \(game.id)")
+                                toCompare[0].scoreE1 = Int16(game.scoreE1)
+                                toCompare[0].scoreE2 = Int16(game.scoreE2)
+                                toCompare[0].updatedDate = game.updatedDate
+                                try self.managedObjectContext.save()
+                                
+                            }else{
+                                print("not updating : \(game.id)")
+                            }
+                        }else{
+                            //insert
+                            print("Insert : \(game.id)")
+                            game.toGame(managedObjectContext: self.managedObjectContext)
+                            try self.managedObjectContext.save()
+                            
+                        }
+                    }catch{
+                        print(error.localizedDescription)
+                    }
+                }
+            }
             //print(self.parties)
         }
         PersistenceController.shared.save()

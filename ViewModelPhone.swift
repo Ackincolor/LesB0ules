@@ -15,6 +15,8 @@ class ViewModelPhone : NSObject,  WCSessionDelegate, ObservableObject{
     
     var parties: [PartieBoules]
     var managedObjectContext = PersistenceController.shared.container.viewContext
+    let jsonEncoder = JSONEncoder()
+    
     init(session: WCSession = .default){
         self.session = session
         //remplissage d'un liste de partie
@@ -27,6 +29,16 @@ class ViewModelPhone : NSObject,  WCSessionDelegate, ObservableObject{
         self.session.delegate = self
         self.managedObjectContext.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
         self.session.activate()
+        
+        let sync = DispatchQueue.init(label: "sync_watch")
+        sync.async {
+            //lauch sync every 10 seconds
+            if(self.session.isReachable){
+                self.session.sendMessage(["sync" : "true"], replyHandler: nil) { (error) in
+                    print(error.localizedDescription)
+                }
+            }
+        }
         
     }
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
@@ -52,22 +64,45 @@ class ViewModelPhone : NSObject,  WCSessionDelegate, ObservableObject{
                         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Game")
                         fetchRequest.predicate = NSPredicate(format:"id == %@",game.id.uuidString)
                         let fetchedData = try self.managedObjectContext.fetch(fetchRequest) as! [Game]
-                        var toCompare:[PartieBoules] = []
+                        var toCompare:[Game] = []
                         for game in fetchedData {
-                            toCompare.append(PartieBoules.init(from: game))
+                            toCompare.append(game)
                         }
                         if(!toCompare.isEmpty){
-                            let more_recent = game.updatedDate > toCompare[0].updatedDate ? true : false
+                            let more_recent = game.updatedDate > (toCompare[0].updatedDate)! ? true : false
                             if(more_recent)
                             {
                                 print("Updating : \(game.id)")
+                                toCompare[0].scoreE1 = Int16(game.scoreE1)
+                                toCompare[0].scoreE2 = Int16(game.scoreE2)
+                                toCompare[0].updatedDate = game.updatedDate
+                                try self.managedObjectContext.save()
                                 
                             }else{
                                 print("not updating : \(game.id)")
                             }
                         }else{
                             //insert
+                            print("Insert : \(game.id)")
+                            game.toGame(managedObjectContext: self.managedObjectContext)
+                            try self.managedObjectContext.save()
                             
+                        }
+                        do{
+                            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Game")
+                            let fetchedData = try self.managedObjectContext.fetch(fetchRequest) as! [Game]
+                            var toSend:[PartieBoules] = []
+                            for game in fetchedData {
+                                toSend.append(PartieBoules.init(from: game))
+                            }
+                            let data = try self.jsonEncoder.encode(toSend)
+                            let dataString = String(data: data, encoding: String.Encoding.utf8) ?? "vide"
+                            self.session.sendMessage(["partiessynci" : dataString],  replyHandler: nil) {
+                                 (error) in
+                                print(error.localizedDescription)
+                            }
+                        }catch{
+                            print("erreur lors du fetch : \(error.localizedDescription)")
                         }
                     }catch{
                         print(error.localizedDescription)

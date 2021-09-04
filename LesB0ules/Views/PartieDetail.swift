@@ -16,6 +16,7 @@ struct PartieDetail: View {
             Spacer()
             Text("detail " + partie.nom!)
             JoueursList(joueurs: partie.participants?.array as [Person])
+            ScoreController(partie: partie)
             
         }
     }
